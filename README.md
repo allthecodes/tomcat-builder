@@ -39,10 +39,6 @@ Proposed Design:
 *	The API will be implemented for both Tomcat 7 and Tomcat 8
 *	The API will just work on top on an existing build you should be bale to drop a tomcat-builder.jar into CATALINA_HOME\lib and have it be available
 *	The existing Tomcat class will not be touched. 
-
-Code Repo: 
-
-https://github.com/asaikali/tomcat-builder contains a very early version of this API it is just work in progress but there is enough there to ask for feedback and give you a better idea of what I am thinking.
 	
 Simple start example Usage:
 
@@ -61,12 +57,9 @@ server.start();
 server.await();
 ```
 
-What I am looking for are answers to the following questions.
+Code Repo: 
 
-* Has anyone already done such as API?
-*	Do Tomcat committer want such embedding features added to tomcat?
-*	Is there still time to include such an API in tomcat 8?
-* Is there any chance that such a jar would be included in the core tomcat 7 distribution? 
+https://github.com/asaikali/tomcat-builder contains a very early version of this API it is just work in progress but there is enough there to ask for feedback and give you a better idea of what I am thinking.
 
 If you are wondering why as a user why you want to embed tomcat please refer to my slides on this topic from. 
 *	Java One 2013 - https://bitbucket.org/asaikali/javaone-tomcat-embedding
