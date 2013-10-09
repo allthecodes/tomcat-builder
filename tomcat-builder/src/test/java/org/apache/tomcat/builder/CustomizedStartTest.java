@@ -4,8 +4,13 @@ import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Server;
 import org.junit.Test;
 
-public class ServerBuilderTest {
+public class CustomizedStartTest {
 	
+	/**
+	 * This test should show different aspect of server.xml can be configured within this api.
+	 * 
+	 * @throws LifecycleException
+	 */
 	@Test
 	public void exampleStart() throws LifecycleException
 	{
@@ -14,6 +19,5 @@ public class ServerBuilderTest {
 		Server server = serverBuilder.build();
 		server.start();
 		server.await();
-	
 	}
 }

@@ -52,7 +52,7 @@ public class ServerBuilder
 
 	public ServerBuilder addService(ServiceConfiguration serviceConfiguration)
 	{
-		this.services.add(serviceConfiguration);
+		this.getServices().add(serviceConfiguration);
 		return this;
 	}
 	
@@ -61,6 +61,10 @@ public class ServerBuilder
 		return this; 
 	}
 
+	public ServerBuilder addContext(ContextConfiguration contextConfiguration)
+	{
+		return this; 
+	}
 	public Server build()
 	{
 
@@ -72,7 +76,7 @@ public class ServerBuilder
 			server.addLifecycleListener(new JasperListener());
 		}
 
-		for (ServiceConfiguration serviceConfiguration : services)
+		for (ServiceConfiguration serviceConfiguration : getServices())
 		{
 			Service service = serviceConfiguration.build();
 			server.addService(service);
@@ -81,4 +85,13 @@ public class ServerBuilder
 		return server;
 	}
 
+	public ServiceConfiguration getService()
+	{
+		return services.get(0);
+	}
+	
+	public List<ServiceConfiguration> getServices()
+	{
+		return services;
+	}
 }

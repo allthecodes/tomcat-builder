@@ -35,6 +35,11 @@ public class EngineConfiguration
 
 		return engine;
 	}
+	
+	public HostConfiguration getDefaultHostConfiguration()
+	{
+		return hosts.get(0);
+	}
 
 	public String getName()
 	{
