@@ -42,7 +42,7 @@ Proposed Design:
 
 Code Repo: 
 
-https://github.com/asaikali/tomcat-builder contains a very early version of this API it is not done , commented it just work in progress but there is enough there to ask for feedback and give you a better idea of what I am thinking.
+https://github.com/asaikali/tomcat-builder contains a very early version of this API it is just work in progress but there is enough there to ask for feedback and give you a better idea of what I am thinking.
 	
 
 What I am looking for are answers to the following questions.
