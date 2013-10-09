@@ -44,6 +44,22 @@ Code Repo:
 
 https://github.com/asaikali/tomcat-builder contains a very early version of this API it is just work in progress but there is enough there to ask for feedback and give you a better idea of what I am thinking.
 	
+Simple start example Usage:
+
+```java
+DefaultServer server = new DefaultServer();
+server.deployAppDir("src/main/webapp", 7777).start();
+```
+
+Fluent Api with Customization Example:
+
+```java
+ServerBuilder serverBuilder = new ServerBuilder();
+serverBuilder.jspOn().shutdownPort(8006).shutdownString("shutdown");
+Server server = serverBuilder.build();
+server.start();
+server.await();
+```
 
 What I am looking for are answers to the following questions.
 
